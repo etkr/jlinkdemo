@@ -37,8 +37,8 @@ ENV PATH "${JAVA_HOME}/bin:${PATH}"
 COPY --from=build /custom_jre $JAVA_HOME
 
 WORKDIR /opt/jlinkdemo/
-# COPY --from=build /build/thin.properties .
-# COPY --from=build /build/deps.info .
+COPY --from=build /build/thin.properties /root
+COPY --from=build /build/deps.info /root
 COPY --from=build /build/m2 /m2
 COPY --from=build /build/target/jlinkdemo-0.0.1-SNAPSHOT.jar jlinkdemo.jar
 EXPOSE 8080
