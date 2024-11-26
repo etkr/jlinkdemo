@@ -1,0 +1,6 @@
+**/target/
+**/.mvn/
+**/.vscode/
+Dockerfile
+.dockerignore
+.gitignore
